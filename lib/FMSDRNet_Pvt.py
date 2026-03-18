@@ -206,9 +206,9 @@ class AFRM(nn.Module):
         return out + x
 
 
-class FMSDRNet(nn.Module):
+class TDMLNet(nn.Module):
     def __init__(self, n_feat=64,kernel_size=3,reduction=4,bias=False,act=nn.PReLU(), train_mode=True):
-        super(FMSDRNet, self).__init__()
+        super(TDMLNet, self).__init__()
 
         self.backbone = pvt_v2_b4()  # [64, 128, 320, 512]
         path = './lib/pvt_v2_b4.pth'
