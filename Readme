@@ -65,20 +65,20 @@ datasets/
 
 ## 🏋️ Training
 ```
-python LG-UNetTrain_Val.py
+python MyTrain.py
 ```
 
 
 ## 🔍 Testing
 ```
-python LG-UNetTesting.py
+python MyTesting.py
 ```
 
 ## 📗 Citation
 
 Please cite our work if you use the code or results:
 ```
-@article{Zhu2025FMSDRNet,
+@article{Zhu2025TDMLNet,
   title   = {Target-aware Disentanglement and Multi-Angle Adaptive Localization Network for Camouflaged Object Detection},
   author  = {Kun Zhu and Haotian Wu and Dexin Zhao},
   journal = {The Visual Computer},
