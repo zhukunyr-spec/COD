@@ -1,12 +1,11 @@
-# LG-UNet: Nested U-Net with Discrepancy-Aware Learning for Enhanced Camouflaged Object Detection
+# Target-aware Disentanglement and Multi-Angle Adaptive Localization Network for Camouflaged Object Detection
 
 This repository provides the official PyTorch implementation of:
 
-**Yao Xiao, Haotian Wu, Kun Zhu, Dexin Zhao\***  
-**"Nested U-Net with Discrepancy-Aware Learning for Enhanced Camouflaged Object Detection"**  
+**Kun Zhu, Haotian Wu, Dexin Zhao\***  
+**"Target-aware Disentanglement and Multi-Angle Adaptive Localization Network for Camouflaged Object Detection"**  
 *The Visual Computer*
 
-> 🔗 **Permanent Project Link:** https://github.com/xiaoyao2346/LG-UNet  
-> 🔗 **Contact:** xiaoyao@stud.tjut.edu.cn
+> 🔗 **Contact:** zhukunyr@gmail.com
 
 ---
