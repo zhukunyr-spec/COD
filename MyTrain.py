@@ -6,7 +6,7 @@ from datetime import datetime
 
 from torch.backends import cudnn
 import random 
-from lib.FMSDRNet_Pvt import FMSDRNet
+from lib.TDMLNet_Pvt import TDMLNet
 from utils.dataloade import get_loader, test_dataset
 from utils.utils import clip_gradient, adjust_lr, AvgMeter, AdaX, AdaXW
 import torch.nn.functional as F
@@ -151,7 +151,7 @@ def train(train_loader, model, optimizer, epoch, test_path):
 if __name__ == '__main__':
     set_seed(2025)
     ##################model_name#############################
-    model_name = 'FMSDRNet'
+    model_name = 'TDMLNet'
 
     ###############################################
     parser = argparse.ArgumentParser()
@@ -167,7 +167,7 @@ if __name__ == '__main__':
     parser.add_argument('--decay_epoch', type=int,default=50, help='every n epochs decay learning rate')
     parser.add_argument('--train_path', type=str,default='./TrainDataset',help='path to train dataset')
     parser.add_argument('--test_path', type=str,default='./TestDataset/COD10K',help='path to testing dataset')
-    parser.add_argument('--save_path', type=str,default='./FMSDRNet/'+model_name+'/')
+    parser.add_argument('--save_path', type=str,default='./TDMLNet/'+model_name+'/')
     parser.add_argument('--epoch_save', type=int,default=1, help='every n epochs to save model')
     opt = parser.parse_args()
 
@@ -183,7 +183,7 @@ if __name__ == '__main__':
     cudnn.benchmark = True
     device_ids = [0,1]
     # ---- build models ----
-    model = torch.nn.DataParallel(FMSDRNet(), device_ids=device_ids)
+    model = torch.nn.DataParallel(TDMLNet(), device_ids=device_ids)
     model = model.cuda(device=device_ids[0])
     
     if opt.load is not None:
