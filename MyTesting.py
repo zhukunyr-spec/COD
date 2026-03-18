@@ -4,7 +4,7 @@ import numpy as np
 import os, argparse
 from scipy import misc
 import cv2
-from lib.FMSDRNet_Pvt import FMSDRNet
+from lib.TDMLNet_Pvt import TDMLNet
 from utils.dataloader import My_test_dataset 
 
 
