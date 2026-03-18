@@ -9,15 +9,15 @@ from utils.dataloader import My_test_dataset
 
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser()F
 parser.add_argument('--testsize', type=int, default=512, help='testing size default 352')
-parser.add_argument('--pth_path', type=str, default='')
+parser.add_argument('--pth_path', type=str, default='') 
 opt = parser.parse_args()
-for _data_name in []:
-    data_path = ''.format(_data_name)
-    save_path = ''.format(opt.pth_path.split('/')[-2], _data_name)
+for _data_name in ['CAMO', 'CHAMELEON', 'COD10K', 'NC4K']:
+    data_path = './'.format(_data_name)
+    save_path = './'.format(opt.pth_path.split('/')[-2], _data_name)
     
-    model = IdeNet(train_mode=False)
+    model = FMSDRNet(train_mode=False)
     model.load_state_dict(
             {k.replace('module.', ''): v for k, v in torch.load(opt.pth_path).items()})
     model.cuda()
